@@ -34,6 +34,7 @@
 * [✔️] Easy to use
 * [✔️] MIT License
 * [✔️] Without jQuery depencence
+* [✔️] Configurable with attributes
 * [✔️] Work with: Browserify / Webpack / ReactJS / Angular / Wordpress
 * [✔️] My Patreon Tier Box with avatars and link from rest/json api.
 * [✔️] Translations: 🇬🇧 🇮🇹 🇵🇱 (Help me ❤️)
@@ -44,7 +45,7 @@ See [Demo here](https://codepen.io/ptkdev/pen/abvLgOE). Photos from ptkdev's pat
 [![WebComponent: PatreonBox](https://raw.githubusercontent.com/ptkdev-components/webcomponent-patreon-box/nightly/.github/assets/screenshot/webcomponent-patreon-box-screen1.png?)](https://raw.githubusercontent.com/ptkdev-components/webcomponent-patreon-box/nightly/.github/assets/screenshot/webcomponent-patreon-box-screen1.png)
 
 ## 🚀 Installation (Web)
-1. Add html code to your page (and replace `@ptkdev` with your patreon username):
+1. Add html code to your page (and replace `api` with your endpoint):
 ```html
 <patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
 ```
@@ -59,7 +60,7 @@ See folder `examples`, run with `npm run example`. Below is available a descript
 
 ## 📦 Installation (NPM Module - Browserify/Webpack)
 1. Install npm module: `npm install @ptkdev/webcomponent-patreon-box --save`
-2. Add html code to your page (and replace `@ptkdev` with your patreon username):
+2. Add html code to your page (and replace `api` with your endpoint):
 ```html
 <patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
 ```
@@ -76,7 +77,7 @@ See folder `examples`, run with `npm run example`. Below is available a descript
 
 ## 📖 Installation (Wordpress)
 1. Download [wordpress-plugin](https://github.com/ptkdev-components/webcomponent-patreon-box/raw/nightly/dist/wordpress/patreon-box-wordpress-plugin.zip) and install it.
-1. Add code to your html widget, example: `Appearance` --> `Widget` --> insert `HTML Widget` and paste html code (and replace `@ptkdev` with your patreon username):
+1. Add code to your html widget, example: `Appearance` --> `Widget` --> insert `HTML Widget` and paste html code (and replace `api` with your endpoint):
 ```html
 <patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
 ```
@@ -89,7 +90,7 @@ You can insert this html code in posts, widget, html box or theme. Where you wan
 ```javascript
 import '@ptkdev/webcomponent-patreon-box';
 ```
-3. Add html code to your `App.js` template (and replace `@ptkdev` with your patreon username):
+3. Add html code to your `App.js` template (and replace `api` with your endpoint):
 ```html
 <patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
 ```
@@ -102,7 +103,7 @@ Below is available a description of `options` values and all logger methods.
 ```javascript
 import '@ptkdev/webcomponent-patreon-box';
 ```
-3. Add html code to your html component (and replace `@ptkdev` with your patreon username):
+3. Add html code to your html component (and replace `api` with your endpoint):
 ```html
 <patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
 ```
