@@ -1,0 +1,52 @@
+#patreon-box {
+	* {
+		margin: 0;
+		padding: 0;
+		line-height: 0;
+	}
+
+	.patreon-box-container {
+		background-color: rgba(249,103,83,.9);
+		border-radius: 25px;
+		padding: 15px;
+		text-align: center;
+		justify-content: center;
+		font-weight: 500;
+	}
+
+	.patreon-box-title p {
+		line-height: normal;
+		padding-bottom: 10px;
+		color: #052a49;
+	}
+
+	.patreon-box-subtitle p {
+		line-height: normal;
+		padding-top: 10px;
+		color: #052a49;
+	}
+
+	.patreon-box-backers li img {
+		border-radius: 5%;
+		background-color: ghostwhite;
+		object-fit: cover;
+		object-position: 50% 50%;
+		max-width: 300px;
+		max-height: 300px;
+		min-width: 80px;
+		min-height: 80px;
+		margin: 2px;
+	}
+
+	.patreon-content ul {
+		list-style-type: none;
+		padding-inline-start: 0;
+		width: 100%;
+
+	}
+
+	.patreon-box-backers li {
+		list-style-type: none;
+		display: inline;
+	}
+}
