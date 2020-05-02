@@ -1,4 +1,4 @@
-# 🌉 WebComponent: PatreonBox
+# 🎁 WebComponent: Patreon Box
 
 [![](https://img.shields.io/badge/version-v1.0.0-lightgrey.svg)](https://github.com/ptkdev-components/webcomponent-patreon-box/releases) [![](https://img.shields.io/npm/v/@ptkdev/webcomponent-patreon-box.svg)](https://www.npmjs.com/package/@ptkdev/webcomponent-patreon-box) [![](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/ptkdev-components/webcomponent-patreon-box/blob/master/LICENSE.md) [![](https://img.shields.io/badge/ES-9-F7DF1E.svg)](https://wikipedia.org/wiki/ECMAScript) [![](https://snyk.io/test/github/ptkdev-components/webcomponent-patreon-box/badge.svg)](https://snyk.io/test/github/ptkdev-components/webcomponent-patreon-box) [![](https://discordapp.com/api/guilds/383373985666301975/embed.png)](http://discord.ptkdev.io)
 
