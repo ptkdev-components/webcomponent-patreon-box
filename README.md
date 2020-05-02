@@ -15,7 +15,7 @@
 
 ## 📎 Menu
 - 💡 [Features](#-features)
-- 🕹 [Demo](https://codepen.io/ptkdev/pen/WNQOYqy)
+- 🕹 [Demo](https://codepen.io/ptkdev/pen/abvLgOE)
 - 👔 [Screenshot](#-screenshot)
 - 🚀 [How to use](#-installation)
 - - 🌎 [Web](#-installation-web)
@@ -39,7 +39,7 @@
 * [✔️] Translations: 🇬🇧 🇮🇹 🇵🇱 (Help me ❤️)
 
 ## 👔 Screenshot
-See [Demo here](https://codepen.io/ptkdev/pen/WNQOYqy). Photos from @ptkdev account:
+See [Demo here](https://codepen.io/ptkdev/pen/abvLgOE). Photos from @ptkdev account:
 
 [![WebComponent: PatreonBox](https://raw.githubusercontent.com/ptkdev-components/webcomponent-patreon-box/nightly/.github/assets/screenshot/webcomponent-patreon-box-screen1.png?)](https://raw.githubusercontent.com/ptkdev-components/webcomponent-patreon-box/nightly/.github/assets/screenshot/webcomponent-patreon-box-screen1.png)
 
