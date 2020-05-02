@@ -52,14 +52,9 @@
 		"patreon",
 		"patreon photos",
 		"patreon box",
-		"patreon last photos",
+		"patreon backers",
 		"patreon widget",
-		"patreon photo widget",
-		"ig",
-		"ig photos",
-		"ig box",
-		"ig last photos",
-		"ig widget"
+		"patreon tier widget"
 	],
 	"engines": {
 		"node": ">=12.0.0"
