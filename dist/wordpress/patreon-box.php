@@ -3,7 +3,7 @@
 Plugin Name: PatreonBox - WebComponent
 Plugin URI:  https://github.com/ptkdev-components/webcomponent-patreon-box
 Description: My Patreon Tier Box with avatars and link from rest/json api. (Unofficial PatreonBox)
-Version:     1.0.0
+Version:     1.1.0
 Author:      Patryk Rzucidło (@PTKDev)
 Author URI:  https://ptk.dev
 License:     MIT

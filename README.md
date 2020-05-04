@@ -1,6 +1,6 @@
 # 🎁 WebComponent: Patreon Box
 
-[![](https://img.shields.io/badge/version-v1.0.0-lightgrey.svg)](https://github.com/ptkdev-components/webcomponent-patreon-box/releases) [![](https://img.shields.io/npm/v/@ptkdev/webcomponent-patreon-box.svg)](https://www.npmjs.com/package/@ptkdev/webcomponent-patreon-box) [![](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/ptkdev-components/webcomponent-patreon-box/blob/master/LICENSE.md) [![](https://img.shields.io/badge/ES-9-F7DF1E.svg)](https://wikipedia.org/wiki/ECMAScript) [![](https://snyk.io/test/github/ptkdev-components/webcomponent-patreon-box/badge.svg)](https://snyk.io/test/github/ptkdev-components/webcomponent-patreon-box) [![](https://discordapp.com/api/guilds/383373985666301975/embed.png)](http://discord.ptkdev.io)
+[![](https://img.shields.io/badge/version-v1.1.0-lightgrey.svg)](https://github.com/ptkdev-components/webcomponent-patreon-box/releases) [![](https://img.shields.io/npm/v/@ptkdev/webcomponent-patreon-box.svg)](https://www.npmjs.com/package/@ptkdev/webcomponent-patreon-box) [![](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/ptkdev-components/webcomponent-patreon-box/blob/master/LICENSE.md) [![](https://img.shields.io/badge/ES-9-F7DF1E.svg)](https://wikipedia.org/wiki/ECMAScript) [![](https://snyk.io/test/github/ptkdev-components/webcomponent-patreon-box/badge.svg)](https://snyk.io/test/github/ptkdev-components/webcomponent-patreon-box) [![](https://discordapp.com/api/guilds/383373985666301975/embed.png)](http://discord.ptkdev.io)
 
 > My Patreon Tier Box with avatars and link from rest/json api.
 
@@ -47,7 +47,7 @@ See [Demo here](https://codepen.io/ptkdev/pen/abvLgOE). Photos from ptkdev's pat
 ## 🚀 Installation (Web)
 1. Add html code to your page (and replace `api` with your endpoint):
 ```html
-<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
+<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px"></patreon-box>
 ```
 2. Require javascript in yourpage (before `</body>`):
 ```html
@@ -62,7 +62,7 @@ See folder `examples`, run with `npm run example`. Below is available a descript
 1. Install npm module: `npm install @ptkdev/webcomponent-patreon-box --save`
 2. Add html code to your page (and replace `api` with your endpoint):
 ```html
-<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
+<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px"></patreon-box>
 ```
 3. Require javascript in your app:
 ```javascript
@@ -79,7 +79,7 @@ See folder `examples`, run with `npm run example`. Below is available a descript
 1. Download [wordpress-plugin](https://github.com/ptkdev-components/webcomponent-patreon-box/raw/nightly/dist/wordpress/patreon-box-wordpress-plugin.zip) and install it.
 1. Add code to your html widget, example: `Appearance` --> `Widget` --> insert `HTML Widget` and paste html code (and replace `api` with your endpoint):
 ```html
-<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
+<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px"></patreon-box>
 ```
 
 You can insert this html code in posts, widget, html box or theme. Where you want see patreon photos box.
@@ -92,7 +92,7 @@ import '@ptkdev/webcomponent-patreon-box';
 ```
 3. Add html code to your `App.js` template (and replace `api` with your endpoint):
 ```html
-<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
+<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px"></patreon-box>
 ```
 
 Below is available a description of `options` values and all logger methods.
@@ -105,7 +105,7 @@ import '@ptkdev/webcomponent-patreon-box';
 ```
 3. Add html code to your html component (and replace `api` with your endpoint):
 ```html
-<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px" />
+<patreon-box api="https://api.ptkdev.io/backers/" image-width="80px" image-height="80px"></patreon-box>
 ```
 
 Below is available a description of `options` values and all logger methods.
@@ -114,7 +114,7 @@ Below is available a description of `options` values and all logger methods.
 
 | Parameter | Description | Values | Default value | Available since |
 | --- | --- | --- | --- | --- |
-| api | REST Api url | `https://api.ptkdev.io/backers/` | v1.0.0 |
+| api | REST Api url | `URI` / `URL` of endpoint | `https://api.ptkdev.io/backers/` | v1.0.0 |
 | items-limit | Set the max number of pictures | number: from `0` to `100`  | `100` | v1.0.0 |
 | grid | Set grid aspect ratio | `1x1`, `2x2`, `3x3`, etc... or `responsive` | `responsive` | v1.0.0 |
 | image-width | Set width of images (NOTE: grid different than `responsive` overwrite this value) | length units: `100%`, `100px`, `100pt` | `100%` | v1.0.0 |

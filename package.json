@@ -1,7 +1,7 @@
 {
 	"name": "@ptkdev/webcomponent-patreon-box",
 	"description": "My Patreon Tier Box with avatars and link from rest/json api.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"main": "dist/lib/en/patreon-box.min.js",
 	"author": "Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)",
 	"license": "MIT",

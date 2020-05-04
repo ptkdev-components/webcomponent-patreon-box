@@ -1,4 +1,4 @@
-// WebComponent: PatreonBox 1.0.0 - Collection of WebComponents by Patryk Rzucidlo [@PTKDev] <support@ptkdev.io>
+// WebComponent: PatreonBox 1.1.0 - Collection of WebComponents by Patryk Rzucidlo [@PTKDev] <support@ptkdev.io>
 // https://github.com/ptkdev-components/webcomponent-patreon-box
 (function() { /**
  * PatreonBox WebComponent
@@ -15,7 +15,7 @@ class PatreonBox extends HTMLElement {
 		super();
 
 		const template = document.createElement("template");
-		template.innerHTML = `<style id="patreon-box-style">#patreon-box *{margin:0;padding:0;line-height:0}#patreon-box .patreon-box-container{background-color:rgba(249,103,83,.9);border-radius:25px;padding:15px;text-align:center;justify-content:center;font-weight:500}#patreon-box .patreon-box-title p{line-height:normal;padding-bottom:10px;color:#052a49}#patreon-box .patreon-box-subtitle p{line-height:normal;padding-top:10px;color:#052a49}#patreon-box .patreon-box-backers li img{border-radius:5%;background-color:#f8f8ff;object-fit:cover;object-position:50% 50%;max-width:300px;max-height:300px;min-width:80px;min-height:80px;margin:2px}#patreon-box .patreon-content ul{list-style-type:none;padding-inline-start:0;width:100%}#patreon-box .patreon-box-backers li{list-style-type:none;display:inline}</style><div id="patreon-box" version="1.0.0">
+		template.innerHTML = `<style id="patreon-box-style">#patreon-box *{margin:0;padding:0;line-height:0}#patreon-box .patreon-box-container{background-color:rgba(249,103,83,.9);border-radius:25px;padding:15px;text-align:center;justify-content:center;font-weight:500}#patreon-box .patreon-box-title p{line-height:normal;padding-bottom:10px;color:#052a49}#patreon-box .patreon-box-subtitle p{line-height:normal;padding-top:10px;color:#052a49}#patreon-box .patreon-box-backers li img{border-radius:5%;background-color:#f8f8ff;object-fit:cover;object-position:50% 50%;max-width:300px;max-height:300px;min-width:80px;min-height:80px;margin:2px}#patreon-box .patreon-content ul{list-style-type:none;padding-inline-start:0;width:100%}#patreon-box .patreon-box-backers li{list-style-type:none;display:inline}</style><div id="patreon-box" version="1.1.0">
 	<div class="patreon-box-container">
 		<div class="patreon-box-title"><p>Grazie a chi mi sostiene su Patreon ❤️</p></div>
 		<div class="patreon-box-content">
@@ -64,12 +64,12 @@ class PatreonBox extends HTMLElement {
 		for (let i = 0; i < photos.length && i < this.options["items-limit"]; i++) {
 			html += `<li><a href="${photos[i].url}" rel="nofollow external noopener noreferrer" target="_blank" ><img width="${this.options["image-width"]}" height="${this.options["image-height"]}" src="${photos[i].pic}" alt="Backer" loading="lazy" /></a></li>`;
 		}
-		document.querySelector("patreon-box").shadowRoot.querySelector(".patreon-box-backers").innerHTML = html;
+		this.shadowRoot.querySelector(".patreon-box-backers").innerHTML = html;
 
 		if (this.options["grid"] !== "" && this.options["grid"] !== null && this.options["grid"] !== "responsive") {
 			let grid = this.options["grid"].split("x");
 			let width = 100 / parseInt(grid[0]);
-			let images = document.querySelector("patreon-box").shadowRoot.querySelectorAll(".patreon-box-backers img");
+			let images = this.shadowRoot.querySelectorAll(".patreon-box-backers img");
 			for (let i=0; i < images.length; i++) {
 				images[i].removeAttribute("width");
 				images[i].style.width = `calc(${(width)}% - (${this.options["border-spacing"]} * (${parseInt(grid[0])} * 2)))`;
@@ -80,11 +80,11 @@ class PatreonBox extends HTMLElement {
 
 				if (this.options["force-square"] === "yes") {
 					images[i].removeAttribute("height");
-					images[i].style.height = `${document.querySelector("patreon-box").shadowRoot.querySelector(".patreon-box-backers img").clientWidth}px`;
+					images[i].style.height = `${this.shadowRoot.querySelector(".patreon-box-backers img").clientWidth}px`;
 				}
 			}
 		} else {
-			let images = document.querySelector("patreon-box").shadowRoot.querySelectorAll(".patreon-box-backers img");
+			let images = this.shadowRoot.querySelectorAll(".patreon-box-backers img");
 			for (let i=0; i < images.length; i++) {
 				images[i].style.borderRadius = `${this.options["border-corners"]}%`;
 				images[i].style.margin = this.options["border-spacing"];
@@ -92,8 +92,22 @@ class PatreonBox extends HTMLElement {
 				if (this.options["force-square"] === "yes") {
 					images[i].removeAttribute("height");
 					images[i].style.maxHeight = "none";
-					images[i].style.height = `${document.querySelector("patreon-box").shadowRoot.querySelector(".patreon-box-backers img").clientWidth}px`;
+					images[i].style.height = `${this.shadowRoot.querySelector(".patreon-box-backers img").clientWidth}px`;
 				}
+			}
+		}
+	}
+
+	/**
+	 * Fix responsive
+	 * =====================
+	 *
+	 */
+	resize() {
+		let images = this.shadowRoot.querySelectorAll(".patreon-box-backers img");
+		for (let i=0; i < images.length; i++) {
+			if (this.options["force-square"] === "yes") {
+				images[i].style.height = `${this.shadowRoot.querySelector(".patreon-box-backers img").clientWidth}px`;
 			}
 		}
 	}
@@ -104,24 +118,17 @@ class PatreonBox extends HTMLElement {
 	 *
 	 */
 	api_fetch() {
-		let self = this;
-
 		fetch(this.options["api"], {"cache": this.options["cache"] === null || this.options["cache"] === "enabled" ? "force-cache" : "default"}).then(function(response) {
 			if (response.status === 200) {
 				return response.json();
 			}
 		}).then(function(response) {
-			self.json = response;
-			self.build_html();
-			window.onresize = () => {
-				let images = document.querySelector("patreon-box").shadowRoot.querySelectorAll(".patreon-box-backers img");
-				for (let i=0; i < images.length; i++) {
-					if (self.options["force-square"] === "yes") {
-						images[i].style.height = `${document.querySelector("patreon-box").shadowRoot.querySelector(".patreon-box-backers img").clientWidth}px`;
-					}
-				}
-			};
-		});
+			this.json = response;
+			this.build_html();
+			window.addEventListener("resize", function(event) {
+				this.resize(event);
+			}.bind(this), false);
+		}.bind(this), false);
 	}
 
 	static get observedAttributes() {
