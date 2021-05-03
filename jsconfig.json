@@ -1,8 +1,4 @@
 {
-	"exclude": [
-		"node_modules"
-	],
-	"include": [
-		"**/*.js"
-	]
+	"exclude": ["node_modules"],
+	"include": ["**/*.js"]
 }

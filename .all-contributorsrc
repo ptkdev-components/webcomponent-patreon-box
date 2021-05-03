@@ -1,46 +1,20 @@
 {
-  "projectName": "ptkdev-components/webcomponent-patreon-box",
-  "projectOwner": "ptkdev",
-  "repoType": "github",
-  "repoHost": "https://github.com",
-  "files": [
-    "README.md"
-  ],
-  "imageSize": 100,
-  "commit": true,
-  "contributors": [
-    {
-      "login": "ptkdev",
-      "name": "Patryk Rzucidło",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/442844?v=4",
-      "profile": "https://ptk.dev",
-      "contributions": [
-        "code",
-        "translation",
-        "doc",
-        "bug"
-      ]
-    },
-	{
-      "login": "emanuelefricano93",
-      "name": "Emanuele Fricano",
-	  "profile": "https://github.com/emanuelefricano93",
-	  "avatar_url": "https://avatars1.githubusercontent.com/u/26500344?v=4",
-      "contributions": [
-        "code",
-        "bug"
-      ]
-    },
-	{
-      "login": "smalluban",
-      "name": "Dominik Lubański",
-	  "profile": "https://github.com/smalluban",
-	  "avatar_url": "https://avatars1.githubusercontent.com/u/1906677?v=4",
-      "contributions": [
-        "bug"
-      ]
-    }
-  ],
-  "contributorsPerLine": 6,
-  "commitConvention": "none"
+	"projectName": "ptkdev-boilerplate/svelte-webcomponent-boilerplate",
+	"projectOwner": "ptkdev",
+	"repoType": "github",
+	"repoHost": "https://github.com",
+	"files": ["README.md"],
+	"imageSize": 100,
+	"commit": true,
+	"contributors": [
+		{
+			"login": "ptkdev",
+			"name": "Patryk Rzucidło",
+			"avatar_url": "https://avatars1.githubusercontent.com/u/442844?v=4",
+			"profile": "https://ptk.dev",
+			"contributions": ["code", "translation", "doc", "bug"]
+		}
+	],
+	"contributorsPerLine": 6,
+	"commitConvention": "none"
 }

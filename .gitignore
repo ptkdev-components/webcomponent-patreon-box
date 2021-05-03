@@ -51,7 +51,6 @@ databases/*.json
 *.sql
 *.sqlite
 *.lock
-*.vscode
 yarn-debug.log
 yarn-error.log
 
@@ -117,11 +116,13 @@ pids
 npm-debug.log
 /node_modules
 
+# Husky #
+/.husky/_/
+
 # App #
 #######
-plugins/*/
-config.js
-config/*.js
-configs/*.js
-/dist/dev
-!/dist/wordpress/*
+/app/configs/config.js
+/app/configs/config.ts
+/extra
+/dist
+/build
